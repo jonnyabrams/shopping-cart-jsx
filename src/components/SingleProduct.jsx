@@ -20,8 +20,8 @@ const SingleProduct = ({ product }) => {
           <Button variant="danger">
             Remove from cart
           </Button>
-          <Button>
-            Add to cart
+          <Button disabled={ !product.inStock }>
+            { !product.inStock ? "Out of stock" : "Add to cart" }
           </Button>
         </Card.Body>
       </Card>
