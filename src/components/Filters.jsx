@@ -4,9 +4,7 @@ import Rating from "./Rating"
 
 const Filters = () => {
 
-  const { filterState: { byStock, byFastDelivery, sort, byRating }, filterDispatch  } = CartState()
-
-  console.log(byStock, byFastDelivery, sort, byRating)
+  const { filterState: { byStock, byFastDelivery, sort, byRating, searchQuery }, filterDispatch  } = CartState()
 
   return (
     <div className="filters">
@@ -14,7 +12,7 @@ const Filters = () => {
       <span>
         <Form.Check
           inline
-          label="Ascending"
+          label="Ascending order of price"
           name="group1"
           type="radio"
           id={`inline-1`}
@@ -30,7 +28,7 @@ const Filters = () => {
       <span>
         <Form.Check
           inline
-          label="Descending"
+          label="Descending order of price"
           name="group1"
           type="radio"
           id={`inline-2`}
