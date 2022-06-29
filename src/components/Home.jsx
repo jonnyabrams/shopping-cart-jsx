@@ -1,4 +1,5 @@
 import { CartState } from "../context/Context"
+import Filters from "./Filters"
 import SingleProduct from "./SingleProduct"
 import './styles.css'
 
@@ -9,6 +10,7 @@ const Home = () => {
 
   return (
     <div className="home">
+      <Filters />
       <div className="product_container">
         {
           products.map((product) => {
