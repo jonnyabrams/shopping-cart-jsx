@@ -88,6 +88,11 @@ const Filters = () => {
       </span>
       <Button
         variant="light"
+        onClick={() =>
+        filterDispatch({
+          type: "CLEAR_FILTERS"
+        })
+      }
       >
         Clear Filters
       </Button>
