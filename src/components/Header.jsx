@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Container, FormControl, Navbar, Dropdown, Nav, Badge, CarouselItem } from 'react-bootstrap'
+import { Container, FormControl, Navbar, Dropdown, Nav, Badge } from 'react-bootstrap'
 import { FaShoppingCart } from "react-icons/fa"
 
 const Header = () => {
@@ -7,7 +7,7 @@ const Header = () => {
     <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
       <Container>
         <Navbar.Brand>
-          <a href="">Shopping Cart</a>
+          <Link to="/">Shopping Cart</Link>
         </Navbar.Brand>
         <Navbar.Text className="search">
           <FormControl style={{ width: 500 }} placeholder="Search for a product..." className="m-auto" />
