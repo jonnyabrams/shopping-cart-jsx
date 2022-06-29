@@ -5,6 +5,8 @@ import Rating from './Rating'
 const SingleProduct = ({ product }) => {
   const { state: { cart }, dispatch } = CartState()
 
+  console.log(cart)
+
   return (
     <div className="products">
       <Card>
@@ -22,11 +24,11 @@ const SingleProduct = ({ product }) => {
           </Card.Subtitle>
           {
             cart.some((p) => p.id === product.id) ? (
-              <Button variant="danger">
+              <Button onClick={() => dispatch({ type: "REMOVE_FROM_CART", payload: product }) } variant="danger">
                 Remove from cart
               </Button>
             ) : (
-              <Button disabled={ !product.inStock }>
+              <Button onClick={() => dispatch({ type: "ADD_TO_CART", payload: product }) } disabled={ !product.inStock }>
                 { !product.inStock ? "Out of stock" : "Add to cart" }
               </Button>
             )
