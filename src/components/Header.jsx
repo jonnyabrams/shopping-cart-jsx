@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import { Container, FormControl, Navbar, Dropdown, Nav, Badge } from 'react-bootstrap'
 import { FaShoppingCart } from "react-icons/fa"
+import { AiFillDelete } from "react-icons/ai"
 import { CartState } from '../context/Context'
 
 const Header = () => {
 
-  const { state: { cart } } = CartState()
+  const { state: { cart }, dispatch } = CartState()
 
   return (
     <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
@@ -24,7 +25,30 @@ const Header = () => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu style={{ minWidth: 370 }}>
-              <span style={{ padding: 10 }}>Cart is empty!</span>
+ 
+              { cart.length > 0 ? (
+                <>
+                  {
+                    cart.map((prod) => (
+                      <span className="cart_item" key={prod.id}>
+                        <img src={prod.image} className="cart_item_img" alt={prod.name} />
+                        <div className="cart_item_detail">
+                          <span>{prod.name}</span>
+                          <span>£{prod.price.split(".")[0]}</span>
+                        </div>
+                        <AiFillDelete 
+                          fontSize="20px" 
+                          style={{ cursor: "pointer" }} 
+                          onClick={() => dispatch({ type: "REMOVE_FROM_CART", payload: prod })}
+                        />
+                      </span>
+                    ))
+                  }
+                </>
+              ) : (
+                <span style={{ padding: 10 }}>Cart is empty!</span>
+              ) }
+
             </Dropdown.Menu>
           </Dropdown>
         </Nav>
