@@ -8,6 +8,8 @@ They can then add them to (and delete them from) a cart, which calculates a subt
 
 Clicking 'proceed to checkout' doesn't take you anywhere as I am of course not really selling anything!
 
+<img width="1440" alt="Screenshot 2022-06-30 at 15 26 51" src="https://user-images.githubusercontent.com/97295867/176702970-77db426e-8679-48fb-b6c8-74ac87f5bf0b.png">
+
 ---
 
 ##  Video demo
