@@ -18,6 +18,16 @@ https://user-images.githubusercontent.com/97295867/176485061-1aae4207-2613-43dd-
 
 ---
 
+## Instructions for use
+
+1. Clone this repository
+2. cd into its directory
+3. Run `npm install` in the terminal to install relevant dependencies
+4. Run `npm start` and visit [http://localhost:3000](http://localhost:3000) in your browser
+5. Shop for imaginary items to your heart's content
+
+---
+
 ## Technologies used
 
 * React.js
