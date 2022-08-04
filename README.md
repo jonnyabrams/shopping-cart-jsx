@@ -1,5 +1,7 @@
 # Shopping Cart
 
+Try it out: [https://shopping-cart-jsx.vercel.app/](https://shopping-cart-jsx.vercel.app/)
+
 This is a shopping cart I built using React.js while familiarising myself with Context API state management and the useReducer hook. 
 
 Users can use a text input to search through products, the data for which I took from Faker, as well as a number of different filters such as ascending/descending price, availability and ratings.
